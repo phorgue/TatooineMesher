@@ -5,4 +5,4 @@ pyshp>=2.0
 scipy
 shapely
 triangle
-PyTelTools @ git+https://github.com/CNR-Engineering/PyTelTools.git@master
+PyTelTools @ git+https://github.com/CNR-Engineering/PyTelTools.git@v0.3
