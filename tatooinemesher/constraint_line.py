@@ -81,7 +81,7 @@ class ConstraintLine:
         return lines
 
     @staticmethod
-    def get_lines_and_set_limits_from_sections(section_seq, interp_coord='LINEAR'):
+    def get_lines_and_set_limits_from_sections(section_seq, centerlines,interp_coord='LINEAR'):
         """
         @brief: Returns a list of ConstraintLine from an sequence of cross-sections
         @param section_seq <CrossSectionSequence>: sequence of cross-sections
@@ -93,6 +93,7 @@ class ConstraintLine:
         for section in section_seq:
             first_coords.append(section.geom.coords[0][:2])
             last_coords.append(section.geom.coords[-1][:2])
+
         lines = [ConstraintLine(0, first_coords, interp_coord),
                  ConstraintLine(1, last_coords, interp_coord)]
 
